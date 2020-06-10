@@ -2,10 +2,10 @@
 #include "am_mcu_apollo.h"
 #include "am_bsp.h"
 #include "am_util.h"
+#include "AudioDriver.h"
 
 
 #define FIFOTHR 		64
-#define BUF_SIZE		240
 
 volatile bool g_bPDMDataReady = false;
 int16_t i16PDMBuf[2][BUF_SIZE] = {{0},{0}};

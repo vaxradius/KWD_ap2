@@ -63,7 +63,7 @@ define region SRAM = mem:[from 0x10000000 to 0x10040000];
 //
 // Define a block for the heap.
 //
-define block HEAP with alignment = 0x8, size = 0x00000000 { };
+define block HEAP with alignment = 0x8, size = 0x00003C00 { };
 
 //
 // Define a block for the stack.

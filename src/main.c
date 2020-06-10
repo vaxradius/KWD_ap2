@@ -39,6 +39,10 @@
 #include "am_mcu_apollo.h"
 #include "am_bsp.h"
 #include "am_util.h"
+#include "AudioDriver.h"
+
+extern int KWD_init(void);
+extern int KWD_Process(short* i16PCM);
 
 //*****************************************************************************
 //
@@ -48,7 +52,8 @@
 int
 main(void)
 {
-    //
+	uint32_t u32PDMpg = 0;
+	//
     // Set the clock frequency.
     //
     am_hal_clkgen_sysclk_select(AM_HAL_CLKGEN_SYSCLK_MAX);
@@ -85,21 +90,37 @@ main(void)
 
 
     am_util_stdio_printf("KWD\n\n");
+	
+	if(KWD_init())
+		am_util_stdio_printf("KWD_init failed\n");
+	else
+		am_util_stdio_printf("KWD_init OK\n");
 
     //
     // We are done printing.
     // Disable debug printf messages on ITM.
     //
-    am_bsp_debug_printf_disable();
+    //am_bsp_debug_printf_disable();
+
+    PDMinit();
 
     //
     // Loop forever while sleeping.
     //
     while (1)
     {
-        //
+		if (g_bPDMDataReady)
+		{
+			g_bPDMDataReady = false;
+			u32PDMpg = u32PDMPingpong;
+			
+			KWD_Process(i16PDMBuf[(u32PDMpg-1)%2]);
+			
+		}
+
+		//
         // Go to Deep Sleep.
         //
-        am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_DEEP);
+        am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_NORMAL);
     }
 }

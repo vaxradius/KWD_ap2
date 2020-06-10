@@ -2372,13 +2372,13 @@
     <group>
         <name>Sensory</name>
         <file>
-            <name>$PROJ_DIR$\..\Sensory\SensoryLib\am_app_KWD_SensoryTHF.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\Sensory\SensoryLib\appAudio.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\Sensory\SensoryLib\iar\Sensory_ARM_v6.3.1_IAR8.32.2_1Jun2020.a</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Sensory\SensoryLib\SensoryFWsim.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\Sensory\SensoryLib\iar\SensoryProcess_tb.a</name>
