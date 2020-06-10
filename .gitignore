@@ -1,5 +1,7 @@
 iar/.metadata/
 iar/bin/
+iar/settings/
+Sensory
 *.bin
 *.crf
 *.d

@@ -11,7 +11,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>28</version>
+                <version>31</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -66,7 +66,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state></state>
+                    <state>8.32.2.19370</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -112,11 +112,11 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Normal.h</state>
+                    <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>39</state>
                 </option>
                 <option>
@@ -133,7 +133,7 @@
                 </option>
                 <option>
                     <name>CoreVariant</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>39</state>
                 </option>
                 <option>
@@ -156,7 +156,7 @@
                 </option>
                 <option>
                     <name>GFPUCoreSlave2</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>39</state>
                 </option>
                 <option>
@@ -196,20 +196,33 @@
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
                 </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>1</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZoneModes</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>34</version>
+                <version>35</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
                     <state>iar</state>
-          <state>AM_PART_APOLLO2</state>
-          <state>AM_PACKAGE_BGA</state>
+                    <state>AM_PART_APOLLO2</state>
+                    <state>AM_PACKAGE_BGA</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -334,12 +347,12 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\..\..\..\..</state>
-          <state>$PROJ_DIR$\..\..\..\bsp</state>
-          <state>$PROJ_DIR$\..\src</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..</state>
+                    <state>$PROJ_DIR$\..\..\..\bsp</state>
+                    <state>$PROJ_DIR$\..\src</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -456,6 +469,10 @@
                 <option>
                     <name>IccRTTI2</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>OICompilerExtraOption</name>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -605,12 +622,12 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-          <state>$PROJ_DIR$\..\..\..\..\..</state>
-          <state>$PROJ_DIR$\..\..\..\bsp</state>
-          <state>$PROJ_DIR$\..\src</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..</state>
+                    <state>$PROJ_DIR$\..\..\..\bsp</state>
+                    <state>$PROJ_DIR$\..\src</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -682,7 +699,7 @@
             <name>ILINK</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>20</version>
+                <version>22</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -811,8 +828,8 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-          <state>$PROJ_DIR$\..\..\..\bsp\iar\bin\libam_bsp.a</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2\hal\iar\bin\libam_hal.a</state>
+                    <state>$PROJ_DIR$\..\..\..\bsp\iar\bin\libam_bsp.a</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2\hal\iar\bin\libam_hal.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -995,6 +1012,14 @@
                     <name>IlinkLocaleSelect</name>
                     <state>1</state>
                 </option>
+                <option>
+                    <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>###Unitialized###</state>
+                </option>
+                <option>
+                    <name>OILinkExtraOption</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -1034,7 +1059,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>28</version>
+                <version>31</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -1139,7 +1164,7 @@
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>39</state>
                 </option>
                 <option>
@@ -1156,7 +1181,7 @@
                 </option>
                 <option>
                     <name>CoreVariant</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>0</state>
                 </option>
                 <option>
@@ -1179,7 +1204,7 @@
                 </option>
                 <option>
                     <name>GFPUCoreSlave2</name>
-                    <version>25</version>
+                    <version>27</version>
                     <state>39</state>
                 </option>
                 <option>
@@ -1219,21 +1244,34 @@
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
                 </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZone</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>TrustZoneModes</name>
+                    <version>0</version>
+                    <state>0</state>
+                </option>
             </data>
         </settings>
         <settings>
             <name>ICCARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>34</version>
+                <version>35</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
                     <state>NDEBUG</state>
                     <state>iar</state>
-          <state>AM_PART_APOLLO2</state>
-          <state>AM_PACKAGE_BGA</state>
+                    <state>AM_PART_APOLLO2</state>
+                    <state>AM_PACKAGE_BGA</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1358,12 +1396,12 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\..\..\..\..\..</state>
-          <state>$PROJ_DIR$\..\..\..\bsp</state>
-          <state>$PROJ_DIR$\..\src</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..</state>
+                    <state>$PROJ_DIR$\..\..\..\bsp</state>
+                    <state>$PROJ_DIR$\..\src</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\utils</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\devices</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1480,6 +1518,10 @@
                 <option>
                     <name>IccRTTI2</name>
                     <state>0</state>
+                </option>
+                <option>
+                    <name>OICompilerExtraOption</name>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -1701,7 +1743,7 @@
             <name>ILINK</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>20</version>
+                <version>22</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -1830,8 +1872,8 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-          <state>$PROJ_DIR$\..\..\..\bsp\iar\bin\libam_bsp.a</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2\hal\iar\bin\libam_hal.a</state>
+                    <state>$PROJ_DIR$\..\..\..\bsp\iar\bin\libam_bsp.a</state>
+                    <state>$PROJ_DIR$\..\..\..\..\..\mcu\apollo2\hal\iar\bin\libam_hal.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2014,6 +2056,14 @@
                     <name>IlinkLocaleSelect</name>
                     <state>1</state>
                 </option>
+                <option>
+                    <name>IlinkTrustzoneImportLibraryOut</name>
+                    <state>###Unitialized###</state>
+                </option>
+                <option>
+                    <name>OILinkExtraOption</name>
+                    <state>1</state>
+                </option>
             </data>
         </settings>
         <settings>
@@ -2043,21 +2093,24 @@
             <data />
         </settings>
     </configuration>
-  <file>
-    <name>$PROJ_DIR$\..\src\hello_world.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_delay.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_faultisr.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_id.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_stdio.c</name>
-  </file>
+    <file>
+        <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_delay.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_faultisr.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_id.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_stdio.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\src\AudioDriver.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\src\main.c</name>
+    </file>
     <file>
         <name>$PROJ_DIR$\startup_iar.c</name>
     </file>

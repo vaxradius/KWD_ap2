@@ -1,18 +1,5 @@
 //*****************************************************************************
 //
-//! @file hello_world.c
-//!
-//! @brief A simple "Hello World" example.
-//!
-//! This example prints a "Hello World" message with some device info
-//! over SWO at 1M baud. To see the output of this program, run AMFlash,
-//! and configure the console for SWO. The example sleeps after it is done
-//! printing.
-//
-//*****************************************************************************
-
-//*****************************************************************************
-//
 // Copyright (c) 2020, Ambiq Micro
 // All rights reserved.
 //
@@ -55,35 +42,12 @@
 
 //*****************************************************************************
 //
-// Insert compiler version at compile time.
-//
-//*****************************************************************************
-#define STRINGIZE_VAL(n)                    STRINGIZE_VAL2(n)
-#define STRINGIZE_VAL2(n)                   #n
-
-#ifdef __GNUC__
-#define COMPILER_VERSION                    ("GCC " __VERSION__)
-#elif defined(__ARMCC_VERSION)
-#define COMPILER_VERSION                    ("ARMCC " STRINGIZE_VAL(__ARMCC_VERSION))
-#elif defined(__KEIL__)
-#define COMPILER_VERSION                    "KEIL_CARM " STRINGIZE_VAL(__CA__)
-#elif defined(__IAR_SYSTEMS_ICC__)
-#define COMPILER_VERSION                    __VERSION__
-#else
-#define COMPILER_VERSION                    "Compiler unknown"
-#endif
-
-//*****************************************************************************
-//
 // Main
 //
 //*****************************************************************************
 int
 main(void)
 {
-    am_util_id_t sIdDevice;
-    uint32_t ui32StrBuf;
-
     //
     // Set the clock frequency.
     //
@@ -119,54 +83,8 @@ main(void)
     //
     am_bsp_debug_printf_enable();
 
-    //
-    // Print the banner.
-    //
-    am_util_stdio_terminal_clear();
-    am_util_stdio_printf("Hello World!\n\n");
 
-    //
-    // Print the device info.
-    //
-    am_util_id_device(&sIdDevice);
-    am_util_stdio_printf("Vendor Name: %s\n", sIdDevice.pui8VendorName);
-    am_util_stdio_printf("Device type: %s\n",
-         sIdDevice.pui8DeviceName);
-
-    am_util_stdio_printf("Qualified: %s\n",
-                         sIdDevice.sMcuCtrlDevice.ui32Qualified ?
-                         "Yes" : "No");
-
-    am_util_stdio_printf("Device Info:\n"
-                         "\tPart number: 0x%08X\n"
-                         "\tChip ID0:    0x%08X\n"
-                         "\tChip ID1:    0x%08X\n"
-                         "\tRevision:    0x%08X (Rev%c%c)\n",
-                         sIdDevice.sMcuCtrlDevice.ui32ChipPN,
-                         sIdDevice.sMcuCtrlDevice.ui32ChipID0,
-                         sIdDevice.sMcuCtrlDevice.ui32ChipID1,
-                         sIdDevice.sMcuCtrlDevice.ui32ChipRev,
-                         sIdDevice.ui8ChipRevMaj, sIdDevice.ui8ChipRevMin );
-
-    //
-    // If not a multiple of 1024 bytes, append a plus sign to the KB.
-    //
-    ui32StrBuf = ( sIdDevice.sMcuCtrlDevice.ui32FlashSize % 1024 ) ? '+' : 0;
-    am_util_stdio_printf("\tFlash size:  %7d (%d KB%s)\n",
-                         sIdDevice.sMcuCtrlDevice.ui32FlashSize,
-                         sIdDevice.sMcuCtrlDevice.ui32FlashSize / 1024,
-                         &ui32StrBuf);
-
-    ui32StrBuf = ( sIdDevice.sMcuCtrlDevice.ui32SRAMSize % 1024 ) ? '+' : 0;
-    am_util_stdio_printf("\tSRAM size:   %7d (%d KB%s)\n\n",
-                         sIdDevice.sMcuCtrlDevice.ui32SRAMSize,
-                         sIdDevice.sMcuCtrlDevice.ui32SRAMSize / 1024,
-                         &ui32StrBuf);
-
-    //
-    // Print the compiler version.
-    //
-    am_util_stdio_printf("Compiler: %s\n", COMPILER_VERSION);
+    am_util_stdio_printf("KWD\n\n");
 
     //
     // We are done printing.
