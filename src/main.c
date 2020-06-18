@@ -94,7 +94,7 @@ main(void)
 	if(KWD_init())
 		am_util_stdio_printf("KWD_init failed\n");
 	else
-		am_util_stdio_printf("KWD_init OK\n");
+		am_util_stdio_printf("KWD_init OK\n\n");
 
     //
     // We are done printing.

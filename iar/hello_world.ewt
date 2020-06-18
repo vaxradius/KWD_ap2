@@ -2389,6 +2389,12 @@
         <file>
             <name>$PROJ_DIR$\..\Sensory\thfft_alexa_enus_v3c_dsp_64kb_pc40\thfft_alexa_enus_v3c_dsp_64kb_search_2_pc40.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\Sensory\trecs_Fossil_demo_commands_wakeword_pc60\trecs_Fossil_demo_commands_wakeword_pc60_op10-net.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Sensory\trecs_Fossil_demo_commands_wakeword_pc60\trecs_Fossil_demo_commands_wakeword_pc60_op10-search.c</name>
+        </file>
     </group>
     <file>
         <name>$PROJ_DIR$\..\..\..\..\..\utils\am_util_delay.c</name>
